@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy2-az-nPm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5Z-wL-i62" customClass="AVCamPreviewView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20V-E9-GqM">
+                                <rect key="frame" x="301" y="28" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cnr-bv-hb9"/>
+                                    <constraint firstAttribute="width" constant="50" id="P9l-yx-Zgy"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sJH-ka-6T7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-a4-SUt">
+                                <rect key="frame" x="157" y="599" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="SFV-kD-42I"/>
+                                    <constraint firstAttribute="height" constant="60" id="zqY-xo-pg4"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Fb-dr-a96"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cy2-az-nPm" secondAttribute="bottom" id="360-g6-TdC"/>
-                            <constraint firstItem="cy2-az-nPm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4vz-rS-75n"/>
-                            <constraint firstAttribute="trailing" secondItem="cy2-az-nPm" secondAttribute="trailing" id="Fqw-8e-Bg0"/>
-                            <constraint firstItem="cy2-az-nPm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kDS-87-nMS"/>
+                            <constraint firstItem="Ahn-a4-SUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="61b-YV-zfC"/>
+                            <constraint firstItem="c5Z-wL-i62" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Agv-Z7-4Fs"/>
+                            <constraint firstAttribute="trailing" secondItem="c5Z-wL-i62" secondAttribute="trailing" id="FWg-UY-emF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="20V-E9-GqM" secondAttribute="trailing" constant="8" id="Rkw-Iw-SQJ"/>
+                            <constraint firstItem="20V-E9-GqM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TEU-NQ-J0L"/>
+                            <constraint firstItem="c5Z-wL-i62" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sqB-wR-4go"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5Z-wL-i62" secondAttribute="bottom" id="tBF-cv-9Qt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ahn-a4-SUt" secondAttribute="bottom" constant="8" id="xn9-Sf-kl7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="c5Z-wL-i62" id="ced-qY-ODK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>

@@ -34,5 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>I wanna see ya!</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>I wanna hear ya too!</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>I wanna save it for you!</string>
 </dict>
 </plist>

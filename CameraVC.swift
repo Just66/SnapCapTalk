@@ -8,12 +8,17 @@
 
 import UIKit
 
-class CameraVC: CameraViewController {
+class CameraVC: AVCamCameraViewController {
 
+   
+    @IBOutlet weak var previewView: AVCamPreviewView!
+        
     override func viewDidLoad() {
+        
+        self._previewView = previewView
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +26,13 @@ class CameraVC: CameraViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func changeCamera(_ sender: Any) {
+        changeCamera()
+    }
+    
+    @IBAction func recordBtnPressed(_ sender: Any) {
+        toggleMovieRecording()
+    }
 
     /*
     // MARK: - Navigation
