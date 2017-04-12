@@ -26,6 +26,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QSm-3A-CZY">
+                                <rect key="frame" x="136" y="562" width="103" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="J5s-aS-O7v"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Movie"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleControll:" destination="BYZ-38-t0r" eventType="valueChanged" id="kiE-b3-gYb"/>
+                                </connections>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20V-E9-GqM">
                                 <rect key="frame" x="301" y="28" width="50" height="50"/>
                                 <constraints>
@@ -56,13 +69,18 @@
                             <constraint firstAttribute="trailing" secondItem="c5Z-wL-i62" secondAttribute="trailing" id="FWg-UY-emF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="20V-E9-GqM" secondAttribute="trailing" constant="8" id="Rkw-Iw-SQJ"/>
                             <constraint firstItem="20V-E9-GqM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TEU-NQ-J0L"/>
+                            <constraint firstItem="QSm-3A-CZY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iZv-Yo-dbs"/>
                             <constraint firstItem="c5Z-wL-i62" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sqB-wR-4go"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5Z-wL-i62" secondAttribute="bottom" id="tBF-cv-9Qt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ahn-a4-SUt" secondAttribute="bottom" constant="8" id="xn9-Sf-kl7"/>
+                            <constraint firstItem="Ahn-a4-SUt" firstAttribute="top" secondItem="QSm-3A-CZY" secondAttribute="bottom" constant="12" id="zO1-F8-k6t"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="camBtn" destination="20V-E9-GqM" id="fHP-aJ-Ddx"/>
+                        <outlet property="modeBtn" destination="QSm-3A-CZY" id="Lma-Rt-bET"/>
                         <outlet property="previewView" destination="c5Z-wL-i62" id="ced-qY-ODK"/>
+                        <outlet property="recordBtn" destination="Ahn-a4-SUt" id="4pv-Vs-Hj6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

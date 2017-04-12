@@ -8,14 +8,19 @@
 
 import UIKit
 
-class CameraVC: AVCamCameraViewController {
+class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
 
    
+    @IBOutlet weak var camBtn: UIButton!
+    @IBOutlet weak var recordBtn: UIButton!
     @IBOutlet weak var previewView: AVCamPreviewView!
+    @IBOutlet weak var modeBtn: UISegmentedControl!
         
     override func viewDidLoad() {
+        delegate = self
         
         self._previewView = previewView
+        captureModeControl = modeBtn
 
         super.viewDidLoad()
 
@@ -25,6 +30,9 @@ class CameraVC: AVCamCameraViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func toggleControll(_ sender: Any) {
+        toggleCaptureMode()
+            }
     
     @IBAction func changeCamera(_ sender: Any) {
         changeCamera()
@@ -32,6 +40,25 @@ class CameraVC: AVCamCameraViewController {
     
     @IBAction func recordBtnPressed(_ sender: Any) {
         toggleMovieRecording()
+        
+    }
+    
+    func shouldEnableControls(_ enable: Bool) {
+        camBtn.isEnabled = enable
+        print("Should enable camera UI: \(enable)")
+    }
+    
+    func shouldEnableRecord(_ enable: Bool) {
+        recordBtn.isEnabled = enable
+        print("Should enable record UI: \(enable)")
+    }
+    
+    func recordingHasStarted() {
+        print("record has started")
+    }
+    
+    func recordingCanStart() {
+        print("record can start")
     }
 
     /*

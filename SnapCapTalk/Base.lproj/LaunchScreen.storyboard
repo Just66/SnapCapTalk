@@ -20,19 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="kFn-DR-RlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wch-mr-oVB" customClass="PreviewView" customModule="SnapCapTalk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wch-mr-oVB" firstAttribute="top" secondItem="kFn-DR-RlW" secondAttribute="top" id="jqA-JF-CGV"/>
-                            <constraint firstItem="wch-mr-oVB" firstAttribute="leading" secondItem="kFn-DR-RlW" secondAttribute="leading" id="kb6-jO-FoX"/>
-                            <constraint firstAttribute="trailing" secondItem="wch-mr-oVB" secondAttribute="trailing" id="mE2-jf-6pa"/>
-                            <constraint firstItem="ejd-T8-cwR" firstAttribute="top" secondItem="wch-mr-oVB" secondAttribute="bottom" id="xbR-x6-SxM"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN1-eZ-SB0" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -32,6 +32,7 @@
 		E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamCameraViewController.m; sourceTree = "<group>"; };
 		E6E3C5B01E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPhotoCaptureDelegate.h; sourceTree = "<group>"; };
 		E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
+		E6E3C5B91E9D56A000C84FFB /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +65,10 @@
 		E645A2781E9AA48900AF50F4 /* SnapCapTalk */ = {
 			isa = PBXGroup;
 			children = (
+				E6E3C5B81E9D563F00C84FFB /* Protocols */,
 				E6E3C5B61E9BB04300C84FFB /* Controller */,
 				E6E3C5B51E9BB03F00C84FFB /* View */,
 				E645A2791E9AA48900AF50F4 /* AppDelegate.swift */,
-				E6E3C5B01E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.h */,
-				E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */,
 				E645A27D1E9AA48900AF50F4 /* Main.storyboard */,
 				E645A2801E9AA48900AF50F4 /* Assets.xcassets */,
 				E645A2821E9AA48900AF50F4 /* LaunchScreen.storyboard */,
@@ -95,6 +95,16 @@
 				E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		E6E3C5B81E9D563F00C84FFB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E6E3C5B01E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.h */,
+				E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */,
+				E6E3C5B91E9D56A000C84FFB /* Protocols.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
