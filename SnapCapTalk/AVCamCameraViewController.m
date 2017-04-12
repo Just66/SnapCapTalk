@@ -105,7 +105,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
     
 	self.photoButton.enabled = NO;
 	self.livePhotoModeButton.enabled = NO;
-	self.captureModeControl.enabled = NO;
+	self._captureModeControl.enabled = NO;
 	
 	// Create the AVCaptureSession.
 	self.session = [[AVCaptureSession alloc] init];
@@ -395,8 +395,8 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 
 - (void)toggleCaptureMode
 {
-	if ( _captureModeControl.selectedSegmentIndex == AVCamCaptureModePhoto ) {
-		
+	if (__captureModeControl.selectedSegmentIndex == AVCamCaptureModePhoto ) {
+    
         [self.delegate shouldEnableRecord:NO];
         
 		dispatch_async( self.sessionQueue, ^{
@@ -422,7 +422,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 			}
 		} );
 	}
-	else if ( _captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie ) {
+	else if ( __captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie ) {
 		self.livePhotoModeButton.hidden = YES;
 		
 		dispatch_async( self.sessionQueue, ^{
@@ -458,7 +458,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
     [self.delegate shouldEnableRecord:NO];
 	self.photoButton.enabled = NO;
 	self.livePhotoModeButton.enabled = NO;
-	self.captureModeControl.enabled = NO;
+	self._captureModeControl.enabled = NO;
 	
 	dispatch_async( self.sessionQueue, ^{
 		AVCaptureDevice *currentVideoDevice = self.videoDeviceInput.device;
@@ -538,11 +538,11 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 		}
 		
 		dispatch_async( dispatch_get_main_queue(), ^{
-            [self.delegate shouldEnableRecord:self.captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie];
+            [self.delegate shouldEnableRecord:self._captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie];
             [self.delegate shouldEnableControls:YES];
 			self.photoButton.enabled = YES;
 			self.livePhotoModeButton.enabled = YES;
-			self.captureModeControl.enabled = YES;
+			self._captureModeControl.enabled = YES;
 		} );
 	} );
 }
@@ -683,7 +683,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 
 #pragma mark Recording Movies
 
-- (void)toggleMovieRecording: (id)sender
+- (void)toggleMovieRecording
 {
 	/*
 		Disable the Camera button until recording finishes, and disable
@@ -693,7 +693,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 	 */
     [self.delegate shouldEnableControls:NO];
     [self.delegate shouldEnableRecord:YES];
-	self.captureModeControl.enabled = NO;
+	self._captureModeControl.enabled = NO;
 	
 	/*
 		Retrieve the video preview layer's video orientation on the main queue
@@ -803,7 +803,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 		// Only enable the ability to change camera if the device has more than one camera.
         [self.delegate shouldEnableControls:(( self.videoDeviceDiscoverySession.uniqueDevicePositionsCount > 1 ))];
         [self.delegate shouldEnableRecord:YES];
-		self.captureModeControl.enabled = YES;
+		self._captureModeControl.enabled = YES;
         [self.delegate recordingCanStart];
 	});
 }
@@ -845,9 +845,9 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 		dispatch_async( dispatch_get_main_queue(), ^{
 			// Only enable the ability to change camera if the device has more than one camera.
             [self.delegate shouldEnableControls:(isSessionRunning && ( self.videoDeviceDiscoverySession.uniqueDevicePositionsCount > 1 ))];
-            [self.delegate shouldEnableRecord:(isSessionRunning && ( self.captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie ))];
+            [self.delegate shouldEnableRecord:(isSessionRunning && ( self._captureModeControl.selectedSegmentIndex == AVCamCaptureModeMovie ))];
 			self.photoButton.enabled = isSessionRunning;
-			self.captureModeControl.enabled = isSessionRunning;
+			self._captureModeControl.enabled = isSessionRunning;
 			self.livePhotoModeButton.enabled = isSessionRunning && livePhotoCaptureEnabled;
 			self.livePhotoModeButton.hidden = ! ( isSessionRunning && livePhotoCaptureSupported );
 		} );

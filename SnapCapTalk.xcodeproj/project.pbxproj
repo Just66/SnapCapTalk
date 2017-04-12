@@ -15,6 +15,7 @@
 		E6E3C5B21E9BAFC400C84FFB /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */; };
 		E6E3C5B31E9BAFC400C84FFB /* AVCamCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */; };
 		E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */; };
+		E6E3C5BB1E9E997C00C84FFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6E3C5BA1E9E997C00C84FFB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E6E3C5B01E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPhotoCaptureDelegate.h; sourceTree = "<group>"; };
 		E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
 		E6E3C5B91E9D56A000C84FFB /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		E6E3C5BA1E9E997C00C84FFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				E645A2801E9AA48900AF50F4 /* Assets.xcassets */,
 				E645A2821E9AA48900AF50F4 /* LaunchScreen.storyboard */,
 				E645A2851E9AA48900AF50F4 /* Info.plist */,
+				E6E3C5BA1E9E997C00C84FFB /* GoogleService-Info.plist */,
 				E6E3C5AB1E9BAFC400C84FFB /* SnapCapTalk-Bridging-Header.h */,
 			);
 			path = SnapCapTalk;
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E645A2841E9AA48900AF50F4 /* LaunchScreen.storyboard in Resources */,
+				E6E3C5BB1E9E997C00C84FFB /* GoogleService-Info.plist in Resources */,
 				E645A2811E9AA48900AF50F4 /* Assets.xcassets in Resources */,
 				E645A27F1E9AA48900AF50F4 /* Main.storyboard in Resources */,
 			);

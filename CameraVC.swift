@@ -18,9 +18,8 @@ class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
         
     override func viewDidLoad() {
         delegate = self
-        
+        _captureModeControl = modeBtn
         self._previewView = previewView
-        captureModeControl = modeBtn
 
         super.viewDidLoad()
 

@@ -40,5 +40,7 @@
 	<string>I wanna hear ya too!</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>I wanna save it for you!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>I wanna save it!</string>
 </dict>
 </plist>

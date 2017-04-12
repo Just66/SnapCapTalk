@@ -12,7 +12,7 @@
 
 @interface AVCamCameraViewController : UIViewController
 @property (nonatomic, weak)  AVCamPreviewView *_previewView;
-@property (nonatomic, weak) UISegmentedControl *captureModeControl;
+@property (nonatomic, weak) UISegmentedControl *_captureModeControl;
 @property (retain) id <AVCamCameraVCDelegate> delegate;
 
 - (void)toggleMovieRecording;

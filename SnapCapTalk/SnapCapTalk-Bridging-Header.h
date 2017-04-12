@@ -5,3 +5,4 @@
 #import "AVCamCameraViewController.h"
 #import "AVCamPreviewView.h"
 #import "Protocols.h"
+#import "AVCamPhotoCaptureDelegate.h"
