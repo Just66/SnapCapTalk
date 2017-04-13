@@ -42,5 +42,9 @@
 	<string>I wanna save it for you!</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>I wanna save it!</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FIZZO.ttf</string>
+	</array>
 </dict>
 </plist>
