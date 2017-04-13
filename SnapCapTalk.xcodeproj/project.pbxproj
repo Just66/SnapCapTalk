@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7626DB7ACAC4D7CF6AD95B13 /* Pods_SnapCapTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0B0CAF5047C9B5AACF9060 /* Pods_SnapCapTalk.framework */; };
 		E645A27A1E9AA48900AF50F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645A2791E9AA48900AF50F4 /* AppDelegate.swift */; };
 		E645A27F1E9AA48900AF50F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645A27D1E9AA48900AF50F4 /* Main.storyboard */; };
 		E645A2811E9AA48900AF50F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E645A2801E9AA48900AF50F4 /* Assets.xcassets */; };
 		E645A2841E9AA48900AF50F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645A2821E9AA48900AF50F4 /* LaunchScreen.storyboard */; };
 		E645A2921E9AA50800AF50F4 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645A2911E9AA50800AF50F4 /* CameraVC.swift */; };
+		E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD061E9FC3C40094943E /* textFieldRound.swift */; };
+		E6E0CD0A1E9FD4370094943E /* FIZZO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6E0CD091E9FD4370094943E /* FIZZO.ttf */; };
+		E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */; };
 		E6E3C5B21E9BAFC400C84FFB /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */; };
 		E6E3C5B31E9BAFC400C84FFB /* AVCamCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */; };
 		E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0B0CAF5047C9B5AACF9060 /* Pods_SnapCapTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapCapTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A746C2343DF1D20FE289DDE /* Pods-SnapCapTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCapTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapCapTalk/Pods-SnapCapTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		D95B15483D6263830EE86D5C /* Pods-SnapCapTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCapTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapCapTalk/Pods-SnapCapTalk.release.xcconfig"; sourceTree = "<group>"; };
 		E645A2761E9AA48900AF50F4 /* SnapCapTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapCapTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E645A2791E9AA48900AF50F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E645A27E1E9AA48900AF50F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		E645A2831E9AA48900AF50F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E645A2851E9AA48900AF50F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E645A2911E9AA50800AF50F4 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = ../CameraVC.swift; sourceTree = "<group>"; };
+		E6E0CD061E9FC3C40094943E /* textFieldRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldRound.swift; sourceTree = "<group>"; };
+		E6E0CD091E9FD4370094943E /* FIZZO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FIZZO.ttf; sourceTree = "<group>"; };
+		E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundBtn.swift; sourceTree = "<group>"; };
 		E6E3C5AB1E9BAFC400C84FFB /* SnapCapTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapCapTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		E6E3C5AC1E9BAFC400C84FFB /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
 		E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
@@ -42,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7626DB7ACAC4D7CF6AD95B13 /* Pods_SnapCapTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E14A6DB591727E46D1F23E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B0CAF5047C9B5AACF9060 /* Pods_SnapCapTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC5E4E553E70570ED3963A53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A746C2343DF1D20FE289DDE /* Pods-SnapCapTalk.debug.xcconfig */,
+				D95B15483D6263830EE86D5C /* Pods-SnapCapTalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E645A26D1E9AA48900AF50F4 = {
 			isa = PBXGroup;
 			children = (
 				E645A2781E9AA48900AF50F4 /* SnapCapTalk */,
 				E645A2771E9AA48900AF50F4 /* Products */,
+				DC5E4E553E70570ED3963A53 /* Pods */,
+				4E14A6DB591727E46D1F23E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,18 +102,29 @@
 				E6E3C5B51E9BB03F00C84FFB /* View */,
 				E645A2791E9AA48900AF50F4 /* AppDelegate.swift */,
 				E645A27D1E9AA48900AF50F4 /* Main.storyboard */,
-				E645A2801E9AA48900AF50F4 /* Assets.xcassets */,
 				E645A2821E9AA48900AF50F4 /* LaunchScreen.storyboard */,
 				E645A2851E9AA48900AF50F4 /* Info.plist */,
 				E6E3C5BA1E9E997C00C84FFB /* GoogleService-Info.plist */,
 				E6E3C5AB1E9BAFC400C84FFB /* SnapCapTalk-Bridging-Header.h */,
+				E6E0CD081E9FD4060094943E /* Assets */,
 			);
 			path = SnapCapTalk;
+			sourceTree = "<group>";
+		};
+		E6E0CD081E9FD4060094943E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E6E0CD091E9FD4370094943E /* FIZZO.ttf */,
+				E645A2801E9AA48900AF50F4 /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		E6E3C5B51E9BB03F00C84FFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6E0CD061E9FC3C40094943E /* textFieldRound.swift */,
+				E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */,
 				E6E3C5AC1E9BAFC400C84FFB /* AVCamPreviewView.h */,
 				E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */,
 			);
@@ -117,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E645A2881E9AA48900AF50F4 /* Build configuration list for PBXNativeTarget "SnapCapTalk" */;
 			buildPhases = (
+				32E705A13BF9A11056BF455B /* [CP] Check Pods Manifest.lock */,
 				E645A2721E9AA48900AF50F4 /* Sources */,
 				E645A2731E9AA48900AF50F4 /* Frameworks */,
 				E645A2741E9AA48900AF50F4 /* Resources */,
+				840D58FF75343FA7CDB68A89 /* [CP] Embed Pods Frameworks */,
+				1DC1DF91827E0FA7F4187568 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +217,7 @@
 			files = (
 				E645A2841E9AA48900AF50F4 /* LaunchScreen.storyboard in Resources */,
 				E6E3C5BB1E9E997C00C84FFB /* GoogleService-Info.plist in Resources */,
+				E6E0CD0A1E9FD4370094943E /* FIZZO.ttf in Resources */,
 				E645A2811E9AA48900AF50F4 /* Assets.xcassets in Resources */,
 				E645A27F1E9AA48900AF50F4 /* Main.storyboard in Resources */,
 			);
@@ -180,12 +225,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DC1DF91827E0FA7F4187568 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapCapTalk/Pods-SnapCapTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32E705A13BF9A11056BF455B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		840D58FF75343FA7CDB68A89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapCapTalk/Pods-SnapCapTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E645A2721E9AA48900AF50F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */,
 				E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */,
+				E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */,
 				E645A27A1E9AA48900AF50F4 /* AppDelegate.swift in Sources */,
 				E645A2921E9AA50800AF50F4 /* CameraVC.swift in Sources */,
 				E6E3C5B31E9BAFC400C84FFB /* AVCamCameraViewController.m in Sources */,
@@ -310,6 +405,7 @@
 		};
 		E645A2891E9AA48900AF50F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A746C2343DF1D20FE289DDE /* Pods-SnapCapTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -326,6 +422,7 @@
 		};
 		E645A28A1E9AA48900AF50F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95B15483D6263830EE86D5C /* Pods-SnapCapTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
