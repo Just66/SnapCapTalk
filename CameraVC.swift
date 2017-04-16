@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
 
@@ -17,12 +18,20 @@ class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
     @IBOutlet weak var modeBtn: UISegmentedControl!
         
     override func viewDidLoad() {
+        
         delegate = self
         _captureModeControl = modeBtn
-        self._previewView = previewView
+        _previewView = previewView
 
         super.viewDidLoad()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard FIRAuth.auth()?.currentUser != nil else {
+                performSegue(withIdentifier: "LoginVC", sender: nil)
+                return
+            }
     }
 
     override func didReceiveMemoryWarning() {

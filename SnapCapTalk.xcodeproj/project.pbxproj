@@ -16,6 +16,7 @@
 		E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD061E9FC3C40094943E /* textFieldRound.swift */; };
 		E6E0CD0A1E9FD4370094943E /* FIZZO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6E0CD091E9FD4370094943E /* FIZZO.ttf */; };
 		E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */; };
+		E6E0CD0E1EA390DD0094943E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD0D1EA390DD0094943E /* LoginVC.swift */; };
 		E6E3C5B21E9BAFC400C84FFB /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */; };
 		E6E3C5B31E9BAFC400C84FFB /* AVCamCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */; };
 		E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3C5B11E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m */; };
@@ -36,6 +37,7 @@
 		E6E0CD061E9FC3C40094943E /* textFieldRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldRound.swift; sourceTree = "<group>"; };
 		E6E0CD091E9FD4370094943E /* FIZZO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FIZZO.ttf; sourceTree = "<group>"; };
 		E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundBtn.swift; sourceTree = "<group>"; };
+		E6E0CD0D1EA390DD0094943E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E6E3C5AB1E9BAFC400C84FFB /* SnapCapTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapCapTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		E6E3C5AC1E9BAFC400C84FFB /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
 		E6E3C5AD1E9BAFC400C84FFB /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				E645A2911E9AA50800AF50F4 /* CameraVC.swift */,
+				E6E0CD0D1EA390DD0094943E /* LoginVC.swift */,
 				E6E3C5AE1E9BAFC400C84FFB /* AVCamCameraViewController.h */,
 				E6E3C5AF1E9BAFC400C84FFB /* AVCamCameraViewController.m */,
 			);
@@ -280,6 +283,7 @@
 			files = (
 				E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */,
 				E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */,
+				E6E0CD0E1EA390DD0094943E /* LoginVC.swift in Sources */,
 				E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */,
 				E645A27A1E9AA48900AF50F4 /* AppDelegate.swift in Sources */,
 				E645A2921E9AA50800AF50F4 /* CameraVC.swift in Sources */,
