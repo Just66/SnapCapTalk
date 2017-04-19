@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="124"/>
+            <point key="canvasLocation" x="184" y="200"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="vtN-XY-K8B">
@@ -190,6 +190,9 @@
                                                         <color key="value" red="0.34509804840000002" green="0.9098039269" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LoginBtn:" destination="rs2-iu-Bps" eventType="touchUpInside" id="75R-98-oi1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -224,6 +227,10 @@
                             <constraint firstItem="6UK-Iy-M2Z" firstAttribute="top" secondItem="kLj-2B-G9l" secondAttribute="bottom" id="mMQ-mE-waP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailText" destination="I7f-hA-glf" id="bSW-fT-gvN"/>
+                        <outlet property="passwordText" destination="UJ3-80-3mN" id="ElO-Vv-gi8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPu-Nk-h67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

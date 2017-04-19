@@ -13,6 +13,7 @@
 		E645A2811E9AA48900AF50F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E645A2801E9AA48900AF50F4 /* Assets.xcassets */; };
 		E645A2841E9AA48900AF50F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645A2821E9AA48900AF50F4 /* LaunchScreen.storyboard */; };
 		E645A2921E9AA50800AF50F4 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645A2911E9AA50800AF50F4 /* CameraVC.swift */; };
+		E6C1D1371EA7D14400421DC7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1D1361EA7D14400421DC7 /* AuthService.swift */; };
 		E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD061E9FC3C40094943E /* textFieldRound.swift */; };
 		E6E0CD0A1E9FD4370094943E /* FIZZO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6E0CD091E9FD4370094943E /* FIZZO.ttf */; };
 		E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */; };
@@ -34,6 +35,7 @@
 		E645A2831E9AA48900AF50F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E645A2851E9AA48900AF50F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E645A2911E9AA50800AF50F4 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = ../CameraVC.swift; sourceTree = "<group>"; };
+		E6C1D1361EA7D14400421DC7 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E6E0CD061E9FC3C40094943E /* textFieldRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldRound.swift; sourceTree = "<group>"; };
 		E6E0CD091E9FD4370094943E /* FIZZO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FIZZO.ttf; sourceTree = "<group>"; };
 		E6E0CD0B1E9FE2EA0094943E /* roundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundBtn.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		E645A2781E9AA48900AF50F4 /* SnapCapTalk */ = {
 			isa = PBXGroup;
 			children = (
+				E6C1D1351EA7D11500421DC7 /* Service */,
 				E6E3C5B81E9D563F00C84FFB /* Protocols */,
 				E6E3C5B61E9BB04300C84FFB /* Controller */,
 				E6E3C5B51E9BB03F00C84FFB /* View */,
@@ -111,6 +114,14 @@
 				E6E0CD081E9FD4060094943E /* Assets */,
 			);
 			path = SnapCapTalk;
+			sourceTree = "<group>";
+		};
+		E6C1D1351EA7D11500421DC7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E6C1D1361EA7D14400421DC7 /* AuthService.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		E6E0CD081E9FD4060094943E /* Assets */ = {
@@ -284,6 +295,7 @@
 				E6E0CD071E9FC3C40094943E /* textFieldRound.swift in Sources */,
 				E6E3C5B41E9BAFC400C84FFB /* AVCamPhotoCaptureDelegate.m in Sources */,
 				E6E0CD0E1EA390DD0094943E /* LoginVC.swift in Sources */,
+				E6C1D1371EA7D14400421DC7 /* AuthService.swift in Sources */,
 				E6E0CD0C1E9FE2EA0094943E /* roundBtn.swift in Sources */,
 				E645A27A1E9AA48900AF50F4 /* AppDelegate.swift in Sources */,
 				E645A2921E9AA50800AF50F4 /* CameraVC.swift in Sources */,

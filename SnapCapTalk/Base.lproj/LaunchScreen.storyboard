@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CameraVC-->
+        <!--View Controller-->
         <scene sceneID="vXV-jE-TSq">
             <objects>
-                <viewController id="kWI-qL-QhV" customClass="CameraVC" customModule="SnapCapTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kWI-qL-QhV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qAS-al-29C"/>
                         <viewControllerLayoutGuide type="bottom" id="ejd-T8-cwR"/>
