@@ -18,7 +18,7 @@ class AuthService {
         return _instance
     }
     
-    func login (email: String, password: String, onCompletion: @escaping Completion) {
+    func login (email: String, password: String, onCompletion: Completion?) {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
@@ -26,15 +26,17 @@ class AuthService {
                     if errorCode == .errorCodeUserNotFound {
                         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                             if error != nil {
-                                self.handleFirebaseErrors(error: error as! NSError, onComplete: onCompletion)
+                                self.handleFirebaseErrors(error: error! as NSError, onComplete: onCompletion)
                             } else {
                                 if user?.uid != nil {
+                                    
+                                    DataService.instance.saveUser(uid: user!.uid)
                                     // Sign in
                                     FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                                         if error != nil {
-                                            //Show error
+                                            self.handleFirebaseErrors(error: error! as NSError, onComplete: onCompletion)
                                         } else {
-                                            // logged in
+                                            onCompletion?(nil, user)
                                         }
                                     })
                                 }
@@ -43,9 +45,11 @@ class AuthService {
                     }
                 } else {
                     // handle all the other errors
+                    self.handleFirebaseErrors(error: error! as NSError, onComplete: onCompletion)
                 }
             } else {
                 // Succesfull
+                onCompletion?(nil, user)
             }
             
         })

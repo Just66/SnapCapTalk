@@ -472,7 +472,7 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 			case AVCaptureDevicePositionUnspecified:
 			case AVCaptureDevicePositionFront:
 				preferredPosition = AVCaptureDevicePositionBack;
-				preferredDeviceType = AVCaptureDeviceTypeBuiltInDuoCamera;
+				preferredDeviceType = AVCaptureDeviceTypeBuiltInDualCamera;
 				break;
 			case AVCaptureDevicePositionBack:
 				preferredPosition = AVCaptureDevicePositionFront;
@@ -771,8 +771,13 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 	if ( error ) {
 		NSLog( @"Movie file finishing error: %@", error );
 		success = [error.userInfo[AVErrorRecordingSuccessfullyFinishedKey] boolValue];
+        [self.delegate videoRecordingFailed];
 	}
 	if ( success ) {
+        
+        [self.delegate videoRecordingComplete:outputFileURL];
+        
+        /*
 		// Check authorization status.
 		[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
 			if ( status == PHAuthorizationStatusAuthorized ) {
@@ -793,8 +798,10 @@ typedef NS_ENUM( NSInteger, AVCamLivePhotoMode ) {
 				cleanup();
 			}
 		}];
+         */
 	}
 	else {
+        [self.delegate videoRecordingFailed];
 		cleanup();
 	}
 	

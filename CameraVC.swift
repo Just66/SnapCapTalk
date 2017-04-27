@@ -68,6 +68,22 @@ class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
     func recordingCanStart() {
         print("record can start")
     }
+    
+    func videoRecordingFailed() {
+        
+    }
+    
+    func videoRecordingComplete(_ videoUrl: URL!) {
+        
+    }
+    
+    func snapshotTaken(_ snapshotData: Data!) {
+        
+    }
+    
+    func snapshotVailed() {
+        <#code#>
+    }
 
     /*
     // MARK: - Navigation
