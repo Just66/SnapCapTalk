@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
 
 class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +17,25 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private var users = [User]()
     private var selectedUsers = Dictionary<String, User>()
+    
+    private var _snapData: Data?
+    private var _videoURL: URL?
+    
+    var snapData: Data? {
+        set {
+            _snapData = newValue
+        } get {
+            return _snapData
+        }
+    }
+    
+    var videoURL: URL? {
+        set {
+            _videoURL = newValue
+        } get {
+            return _videoURL
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +92,53 @@ class UserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
+    
+    @IBAction func sendPRBtnPressed(sender: AnyObject) {
+        
+        if let url = _videoURL {
+            let videoName = "\(NSUUID().uuidString)\(url)"
+            let ref = DataService.instance.videoStorageRef.child(videoName)
+            
+            _ = ref.putFile(url, metadata: nil, completion: { (meta:FIRStorageMetadata?, err:Error?) in
+                
+                if err != nil {
+                    print("Error uploading video: \(String(describing: err?.localizedDescription))")
+                } else {
+                    let downloadURL = meta!.downloadURL()
+                    DataService.instance.sendMediaPullRequest(senderUID: FIRAuth.auth()!.currentUser!.uid, sendingTo: self.selectedUsers, mediaURL: downloadURL!, textSnippet: "Coding today was LEGIT!")
+                    print("Download URL: \(String(describing: downloadURL))")
+                    //save this somewhere
+                    
+                }
+                
+            })
+            self.dismiss(animated: true, completion: nil)
+        } else if let snap = _snapData {
+            let ref = DataService.instance.imagesStorageRef.child("\(NSUUID().uuidString).jpg")
+            
+            _ = ref.put(snap, metadata: nil, completion: { (meta:FIRStorageMetadata?, err:Error?) in
+                if err != nil {
+                    print("Error uploading snapshot: \(String(describing: err?.localizedDescription))")
+                } else {
+                    _ = meta!.downloadURL()
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+            //            _ = ref.put(snap, metadata: nil, completion: { (meta:FIRStorageMetadata?, err:NSError?) in
+            //
+            //                if err != nil {
+            //                    print("Error uploading snapshot: \(err?.localizedDescription)")
+            //                } else {
+            //                    let downloadURL = meta!.downloadURL()
+            //                    self.dismiss(animated: true, completion: nil)
+            //                }
+            //            })
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 
+    
+    
+   
 
 }

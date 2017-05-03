@@ -34,10 +34,7 @@ class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
             }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     @IBAction func toggleControll(_ sender: Any) {
         toggleCaptureMode()
             }
@@ -74,17 +71,30 @@ class CameraVC: AVCamCameraViewController, AVCamCameraVCDelegate {
     }
     
     func videoRecordingComplete(_ videoUrl: URL!) {
-        
+        performSegue(withIdentifier: "UsersVC", sender: ["videoURL" : videoUrl])
     }
     
     func snapshotTaken(_ snapshotData: Data!) {
-        
+        performSegue(withIdentifier: "UserVC", sender: ["snapshotData" : snapshotData])
     }
     
     func snapshotVailed() {
-        <#code#>
+        
     }
+    
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let userVC = segue.destination as? UserVC {
+            if let videoDict = sender as? Dictionary<String, URL> {
+                let url = videoDict["videoURL"]
+                userVC.videoURL = url
+            } else if let snapDict = sender as? Dictionary<String, Data> {
+                let snapData = snapDict["snapshotData"]
+                userVC.snapData = snapData
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
